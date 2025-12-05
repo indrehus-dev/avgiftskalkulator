@@ -39,7 +39,7 @@ Beregningene avrundes til nærmeste krone.
 col1, col2 = st.columns(2)
 
 with col1:
-    st.header("1) Gitt utsalgspris")
+    st.header("1) Utsalgspris")
     st.caption("(inkl. avgift)")
     
     gross_input = st.number_input("Utsalgspris", min_value=0.0, step=1.0, format="%.2f", key="gross_input")
@@ -61,7 +61,7 @@ with col2:
     if net_input:
         fee, gross = calc_from_net(net_input)
         
-        st.metric("Utsalgspris inkl. avgift", format_currency(gross))
+        st.metric("Pris inkl. avgift", format_currency(gross))
         st.metric("Billettavgift", format_currency(fee))
 
     st.caption("Logikk: <225 → +25 kr · 225–495 → /0,9 · >495 → +55 kr")
