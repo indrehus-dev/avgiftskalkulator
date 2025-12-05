@@ -66,23 +66,7 @@ with col2:
 
     st.caption("Logikk: <225 → +25 kr · 225–495 → /0,9 · >495 → +55 kr")
 
-st.divider()
-
-st.subheader("Hurtigtester")
-test_cols = st.columns(6)
-
-if test_cols[0].button("Gross 200"):
-    st.info(f"Gross 200 -> Fee: {format_currency(calc_from_gross(200)[0])}")
-if test_cols[1].button("Gross 500"):
-    st.info(f"Gross 500 -> Fee: {format_currency(calc_from_gross(500)[0])}")
-if test_cols[2].button("Gross 600"):
-    st.info(f"Gross 600 -> Fee: {format_currency(calc_from_gross(600)[0])}")
-if test_cols[3].button("Net 175"):
-    st.info(f"Net 175 -> Fee: {format_currency(calc_from_net(175)[0])}")
-if test_cols[4].button("Net 450"):
-    st.info(f"Net 450 -> Fee: {format_currency(calc_from_net(450)[0])}")
-if test_cols[5].button("Net 545"):
-    st.info(f"Net 545 -> Fee: {format_currency(calc_from_net(545)[0])}")
 
 st.markdown("---")
 st.caption("© Kulturhuset Ælvespeilet")
+
