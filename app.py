@@ -39,7 +39,7 @@ Beregningene avrundes til nærmeste krone.
 col1, col2 = st.columns(2)
 
 with col1:
-    st.header("1) Utsalgspris")
+    st.header("1) Gitt utsalgspris")
     st.caption("(inkl. avgift)")
     
     gross_input = st.number_input("Utsalgspris", min_value=0.0, step=1.0, format="%.2f", key="gross_input")
@@ -53,7 +53,7 @@ with col1:
     st.caption("Eksempler: 200 → 25 kr · 500 → 50 kr · 600 → 55 kr")
 
 with col2:
-    st.header("2) Pris eks. avgift")
+    st.header("2) Gitt pris eks. avgift")
     st.caption("(netto)")
     
     net_input = st.number_input("Pris eks. avgift", min_value=0.0, step=1.0, format="%.2f", key="net_input")
@@ -69,4 +69,4 @@ with col2:
 
 st.markdown("---")
 st.caption("© Kulturhuset Ælvespeilet")
-
+st.image("qr_code.jpg", width=150)
