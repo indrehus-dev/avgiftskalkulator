@@ -75,31 +75,11 @@ import os
 st.markdown("---")
 st.caption("© Kulturhuset Ælvespeilet")
 
-image_filename = "qr_code.jpg"
+image_filename = "QR_avgiftskalkulator.jpg"
 current_dir = os.path.dirname(os.path.abspath(__file__))
 image_path = os.path.join(current_dir, image_filename)
 
 if os.path.exists(image_path):
     st.image(image_path, width=150)
 else:
-    # Fallback: Case-insensitive search
-    found_file = None
-    try:
-        files_in_dir = os.listdir(current_dir)
-        for f in files_in_dir:
-            if f.lower() == image_filename.lower():
-                found_file = os.path.join(current_dir, f)
-                break
-    except Exception as e:
-        files_in_dir = [str(e)]
-
-    if found_file:
-        st.image(found_file, width=150)
-    else:
-        st.error(f"Finner ikke bildefilen: {image_path}")
-        st.code(f"""
-        Debug Info:
-        - Current Dir: {current_dir}
-        - Working Dir: {os.getcwd()}
-        - Files in Dir: {files_in_dir}
-        """)
+    st.error(f"Finner ikke bildefilen: {image_filename}. Sjekk at filen ligger i samme mappe som app.py.")
