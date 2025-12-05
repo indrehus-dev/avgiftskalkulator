@@ -67,6 +67,16 @@ with col2:
     st.caption("Logikk: <225 → +25 kr · 225–495 → /0,9 · >495 → +55 kr")
 
 
+import os
+
+# ... rest of imports ...
+
+# At the bottom of the file
 st.markdown("---")
 st.caption("© Kulturhuset Ælvespeilet")
-st.image("qr_code.jpg", width=150)
+
+image_path = os.path.join(os.path.dirname(__file__), "qr_code.jpg")
+if os.path.exists(image_path):
+    st.image(image_path, width=150)
+else:
+    st.error(f"Finner ikke bildefilen: {image_path}. Sjekk at 'qr_code.jpg' er lastet opp til samme mappe som app.py på GitHub.")
