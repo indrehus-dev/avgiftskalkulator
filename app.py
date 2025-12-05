@@ -53,7 +53,7 @@ with col1:
     st.caption("Eksempler: 200 → 25 kr · 500 → 50 kr · 600 → 55 kr")
 
 with col2:
-    st.header("2) Gitt pris eks. avgift")
+    st.header("2) Pris eks. avgift")
     st.caption("(netto)")
     
     net_input = st.number_input("Pris eks. avgift", min_value=0.0, step=1.0, format="%.2f", key="net_input")
