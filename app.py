@@ -28,9 +28,9 @@ def format_currency(value):
         return "–"
     return f"{round(value):,} kr".replace(",", " ")
 
-st.set_page_config(page_title="Billettavgiftskalkulator – Ælvespeilet", layout="centered")
+st.set_page_config(page_title="Avgiftskalkulator – Ælvespeilet", layout="centered")
 
-st.title("Billettavgiftskalkulator – Ælvespeilet")
+st.title("Avgiftskalkulator – Ælvespeilet")
 st.markdown("""
 Avgift = **10 %** av utsalgspris (inkl. avgift), **min. 25 kr**, **maks. 55 kr**. 
 Beregningene avrundes til nærmeste krone.
